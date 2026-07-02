@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "013c354c26071a014ed2",
+  "position": {
+    "x": 10,
+    "y": 114,
+    "z": 1,
+    "height": 184,
+    "width": 536,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "01. CONVERSION OPTIMIZATION",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Conversion rate is 3.2% below the 4–5% e-commerce benchmark."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Invest in checkout UX improvements, cart abandonment recovery,"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "and A/B testing on product pages to capture lost revenue."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

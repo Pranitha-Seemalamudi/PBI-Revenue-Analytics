@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "c8b53b8dd97c7ac098a1",
+  "position": {
+    "x": 682,
+    "y": 258,
+    "z": 1001,
+    "height": 192,
+    "width": 598,
+    "tabOrder": 1001
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Channel"
+                    }
+                  },
+                  "Property": "Loyalty Revenue %"
+                }
+              },
+              "queryRef": "Channel.Loyalty Revenue %",
+              "nativeQueryRef": "Loyalty Revenue %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Channel"
+                  }
+                },
+                "Property": "Loyalty Revenue %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f98595b8e45121fdf19b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Channel"
+              }
+            },
+            "Property": "Loyalty Revenue %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

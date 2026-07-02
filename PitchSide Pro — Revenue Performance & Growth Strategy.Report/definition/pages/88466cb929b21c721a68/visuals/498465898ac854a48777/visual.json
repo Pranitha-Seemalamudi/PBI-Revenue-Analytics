@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "498465898ac854a48777",
+  "position": {
+    "x": 278,
+    "y": 522,
+    "z": 6,
+    "height": 128,
+    "width": 742,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "05. JAPAN MARKET ACCELERATION",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Japan is the fastest-growing regional market by YoY revenue %."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Allocate dedicated budget for localized campaigns, Japanese language UX, and regional partnerships to sustain this momentum."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

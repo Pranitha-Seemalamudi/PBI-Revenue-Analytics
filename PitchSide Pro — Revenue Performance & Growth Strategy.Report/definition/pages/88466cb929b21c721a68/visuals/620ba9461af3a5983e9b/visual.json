@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "620ba9461af3a5983e9b",
+  "position": {
+    "x": 640,
+    "y": 298,
+    "z": 3,
+    "height": 160,
+    "width": 608,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "04. LOYALTY PROGRAM GROWTH",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Loyalty members generate disproportionately higher revenue."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Target non-member high-frequency buyers with onboarding"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "incentives to grow the loyalty base and improve retention."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "aaf1433b24008050804b",
+  "position": {
+    "x": 10,
+    "y": 298,
+    "z": 2,
+    "height": 224,
+    "width": 536,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "03. FOOTWEAR CATEGORY EXPANSION",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Footwear shows the strongest YoY revenue growth across all"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "product categories. Expand SKU range and increase marketing"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "spend here to capitalize on existing demand signals."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
