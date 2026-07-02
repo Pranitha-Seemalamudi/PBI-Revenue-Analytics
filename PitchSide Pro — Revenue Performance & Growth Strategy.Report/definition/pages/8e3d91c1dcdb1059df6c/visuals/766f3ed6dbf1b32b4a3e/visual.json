@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "766f3ed6dbf1b32b4a3e",
+  "position": {
+    "x": 24,
+    "y": 62,
+    "z": 2,
+    "height": 168,
+    "width": 578,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Traffic"
+                        }
+                      },
+                      "Property": "BounceRate"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Traffic.BounceRate)",
+              "nativeQueryRef": "Average of BounceRate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Traffic"
+                      }
+                    },
+                    "Property": "BounceRate"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

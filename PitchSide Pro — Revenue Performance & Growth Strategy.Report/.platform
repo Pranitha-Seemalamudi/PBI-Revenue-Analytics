@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "PitchSide Pro — Revenue Performance & Growth Strategy"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3c47b93c-a206-b14d-4825-0b79d77f07d7"
+  }
+}

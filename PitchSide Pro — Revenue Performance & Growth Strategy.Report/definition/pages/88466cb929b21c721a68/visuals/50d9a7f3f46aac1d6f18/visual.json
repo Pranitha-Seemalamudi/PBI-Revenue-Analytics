@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "50d9a7f3f46aac1d6f18",
+  "position": {
+    "x": 640,
+    "y": 114,
+    "z": 4,
+    "height": 148,
+    "width": 640,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "02. MOBILE CHANNEL INVESTMENT",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Mobile drives the highest session volume but lowest conversion."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Prioritize mobile-first design, faster load times, and a"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "streamlined checkout experience for small screens."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

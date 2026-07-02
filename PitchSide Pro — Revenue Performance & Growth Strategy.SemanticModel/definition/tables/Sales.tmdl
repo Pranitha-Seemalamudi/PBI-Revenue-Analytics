@@ -1,0 +1,256 @@
+table Sales
+	lineageTag: a8d91992-3f09-4066-8c58-b18aecdcc777
+
+	measure 'Total Net Revenue' = ```
+			SUM(Sales[NetRevenue])
+			
+			
+			```
+		lineageTag: 85ae3143-1cd3-43d5-85cc-2485de8a6a9f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Profit' = ```
+			SUM(Sales[Profit])
+			
+			```
+		lineageTag: d54f4035-3ba2-4277-b623-97092821ec62
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit Margin %' = ```
+			DIVIDE([Total Profit], [Total Net Revenue], 0)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 0148d9b2-183d-478b-be41-f3fe32decb56
+
+	measure 'Total Orders' = ```
+			DISTINCTCOUNT(Sales[OrderID])
+			
+			```
+		formatString: 0
+		lineageTag: 9e979081-804a-4be5-9be4-a587c0c60a26
+
+	measure 'Revenue PY' = ```
+			CALCULATE([Total Net Revenue], DATEADD('Date'[Date], -1, YEAR))
+			
+			```
+		lineageTag: 6f6391c4-25a7-4d01-b835-f26507afeba8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'YoY Revenue Change' = ```
+			[Total Net Revenue] - [Revenue PY]
+			
+			```
+		lineageTag: 2632abc6-23c1-49e1-8d73-18c63fe38a88
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'YoY Revenue %' = ```
+			DIVIDE([YoY Revenue Change], [Revenue PY], 0)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 97adc5a7-6944-45aa-9509-6082946afd50
+
+	measure 'Total Sessions' = ```
+			SUM(Traffic[Sessions])
+			
+			```
+		formatString: 0
+		lineageTag: 629f0c53-cdb2-4ffe-af0f-8b5c0c946e09
+
+	measure 'Total Conversions' = ```
+			SUM(Traffic[Conversions])
+			
+			```
+		formatString: 0
+		lineageTag: 981bcde9-9d30-4d9c-9031-562224b3904e
+
+	measure 'Conversion Rate %' = ```
+			DIVIDE([Total Conversions], [Total Sessions], 0)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b8f020b4-4d26-4be5-a08e-55c0f4c99d6a
+
+	measure Measure
+		lineageTag: 2f2a8de6-681b-4953-b06b-26bddbcb16a4
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	column OrderLineID
+		dataType: int64
+		formatString: 0
+		lineageTag: cb9d6f6a-4d56-4479-94eb-e50d31c33fd5
+		summarizeBy: count
+		sourceColumn: OrderLineID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 60034c58-d446-457c-84a2-fb0919b515ed
+		summarizeBy: count
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 71187857-88ec-4b88-97e8-fd0c8714cd56
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9c261255-33aa-4c63-9ede-4cbbb228bfc3
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dabb5a4f-2243-4c97-a2a7-7c7990044fa6
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegionKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 83be960d-b128-4fe4-9db7-a3b2a3a9014c
+		summarizeBy: none
+		sourceColumn: RegionKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChannelKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f2c297f2-d67b-460f-acb7-16ee070678c2
+		summarizeBy: none
+		sourceColumn: ChannelKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: b1a412cf-a255-4314-a955-a0ef7573151b
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 7d358e1f-356e-461d-9d53-9b1051710d61
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GrossRevenue
+		dataType: double
+		lineageTag: 1baa3e6d-4673-48db-95ab-79e9f33197e5
+		summarizeBy: sum
+		sourceColumn: GrossRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountAmount
+		dataType: double
+		lineageTag: 232218e6-3961-48b9-9149-8b87ed9d7122
+		summarizeBy: sum
+		sourceColumn: DiscountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetRevenue
+		dataType: double
+		lineageTag: 04ca3ece-b9e3-44b3-9740-2e9eae568729
+		summarizeBy: sum
+		sourceColumn: NetRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitCost
+		dataType: double
+		lineageTag: b9a20ac6-ce00-43ce-8788-d052ed6ea84c
+		summarizeBy: sum
+		sourceColumn: UnitCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Profit
+		dataType: double
+		lineageTag: a63d9206-5fb2-44f4-b6e8-a1ffc0ec27fb
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PromoType
+		dataType: string
+		lineageTag: 4b91f90a-e1e7-450c-948d-de10f100bc9d
+		summarizeBy: none
+		sourceColumn: PromoType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sales = m
+		mode: import
+		queryGroup: 'Fact Tables'
+		source =
+				let
+				    Source = #"Source Data",
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([Name] = "FactSales.csv")),
+				    Content = #"Filtered Rows"{0}[Content],
+				    #"Imported CSV" = Csv.Document(Content,[Delimiter=",", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrderLineID", Int64.Type}, {"OrderID", Int64.Type}, {"DateKey", Int64.Type}, {"ProductKey", Int64.Type}, {"CustomerKey", Int64.Type}, {"RegionKey", Int64.Type}, {"ChannelKey", Int64.Type}, {"Quantity", Int64.Type}, {"UnitPrice", type number}, {"GrossRevenue", type number}, {"DiscountAmount", type number}, {"NetRevenue", type number}, {"UnitCost", type number}, {"Profit", type number}, {"PromoType", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

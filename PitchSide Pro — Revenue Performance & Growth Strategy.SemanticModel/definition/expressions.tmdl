@@ -1,0 +1,14 @@
+expression 'Source Data' =
+		let
+		    // Update this to your local file path
+		    Source = Folder.Files("C:\Users\shlindsay\Microsoft\DataCommunity - Growth\Engagement\Contests\Community Contests\Power BI\PBIDVWC - Barcelona 26\World Champs Round 1 Data"),
+		    #"Filtered Rows" = Table.SelectRows(Source, each ([Name] <> "README_Week1_PitchSide_Pro.txt" and [Name] <> "week1_pitchside_pro_summary.txt")),
+		    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"Extension", "Date accessed", "Date modified", "Date created", "Attributes", "Folder Path"})
+		in
+		    #"Removed Columns"
+	lineageTag: 6a1b14b3-19aa-4ef6-beb6-db067a499406
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
